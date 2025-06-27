@@ -7,12 +7,14 @@ mod operations;
 
 
 fn main() {
-    let tensor = vec![1.0, 2.0, 3.0];
-    let weights = vec![
-        vec![0.5, 0.5, 0.5],   // neuron 1
-        vec![1.0, 0.0, -1.0],  // neuron 2
+    let tensor: Vec<f64> = vec![1.0, 2.0, 3.0];
+    let weights: Vec<Vec<f64>> = vec![
+        vec![0.5, 0.5, 0.5],   
+        vec![1.0, 0.0, -1.0], 
+        vec![10.0, 02.0, -11.0],  
+        
     ];
     
     let result = layers::fully_connected(tensor, weights);
-    println!("{:?}", result);  // Output: [3.0, -2.0]
+    println!("{:?}", result);
 }
